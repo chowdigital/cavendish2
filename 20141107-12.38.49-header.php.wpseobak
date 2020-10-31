@@ -1,0 +1,33 @@
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
+<head>
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<title><?php wp_title(); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<script>var SITE_URL = '<?php echo bloginfo('url'); ?>';</script>
+	<?php wp_head(); ?>
+	<script>if( /Android.+mobile|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == false) {document.write('<script src="<?php echo get_stylesheet_directory_uri() ?>/js/desktop.js">\x3C/script>\x3Clink rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/full2.css?ver=4.0" type="text/css"/>'); document.documentElement.className = "preload";document.querySelector("meta[name=viewport]").setAttribute('content', 'width=1400,user-scalable=0');}</script>
+	<!--[if lt IE 9]><script src="<?php echo get_stylesheet_directory_uri() ?>/js/html5shiv.js"></script><script>var ie8=1;</script><![endif]-->
+</head>
+<?php if($_GET["method"] != "ajax" AND !is_front_page() && !is_page(2) && !is_page('events') ) $class='open'; ?>
+<body <?php body_class($class.' preload'); ?> data-url="http://<?php echo $_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI']; ?>" itemscope="itemscope" itemtype="http://schema.org/Restaurant">
+	<header class="header" role="banner">
+		<div class="wrapper">
+			<a id="logo" href="<?php echo home_url(); ?>/" title="Back to home" itemprop="url">
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/images/The_Cavendish-Marylebone.png" alt="<?php bloginfo('name'); ?>"  itemprop="logo"/>
+			</a>
+			<nav>
+				<button id="menu-icon"><span class="bar1"></span><span class="bar2"></span><span class="bar3"></span></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_id'=>'top-menu', 'container_class'=>'menu-wrap' ) ); ?>
+			</nav>
+			<div id="social-icon"><b></b><b></b><b></b><i></i><i></i></div>
+			<ul id="social">
+				<li><a href="<?php echo home_url(); ?>/sign-up-to-the-newsletter/" class="social-nl"><i>Sign up to the newsletter</i></a></li>
+				<li><a href="https://www.facebook.com/pages/35-New-Cavendish/1547377145481349?sk=info" target="_blank" class="social-fb"><i class="icon-facebook"></i> <strong>Facebook</strong></a></li>
+				<li><a href="https://twitter.com/35newcavendish" target="_blank" class="social-tw"><i class="icon-twitter"></i> <strong>Twitter</strong></a></li>
+				<li><a href="http://instagram.com/35newcavendish" target="_blank" class="social-ig"><i class="icon-instagram"></i> <strong>Instragram</strong></a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- /header -->

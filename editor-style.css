@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+body {text-align: center}
+h1,h2 {font-family:arial,sans-serif;font-size: 23px; text-transform: uppercase; letter-spacing: 5px; font-weight: normal; color: #8C704E}
+h3,h4 {font-family:georgia,serif;margin: 1em 0 0; font: inherit; text-transform: none; letter-spacing: 0; color: #8C704E}
+h1 {font-size: 32px; margin: 1.4em 0 0.8em}
+h4 {font-weight: bold}
+h4, h3 strong,h3 em {color: #000}
+h3 strong {font-weight: normal} 
+p {font-family:georgia,serif;margin: 0 auto 1em;line-height: 1.4em;}
